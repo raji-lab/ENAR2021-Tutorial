@@ -25,14 +25,15 @@ library(huge)
 # Graphical models in medicine
 
 ### Network Medicine
-  - **Fundamental principle**: disease module hypothesis that disease variants are connected.
-  - **Evidence in literature**: 10-fold increase in products of genes associated with a disorder when compared to expectation under random chance. 
-  - **References**: Su and Clish, Metabolomics and Network Medicine, 2017; Goh, K. I., Cusick, M. E. et. al., The human disease network, 2007.
+  - **Fundamental principle**: ".. a disease is rarely a consequence of an abnormality in a single effector gene product. Instead, the disease phenotype is a reflection of various pathobiological processes that interact in a complex network. A corollary of this hypothesis is that the interdependencies among a cell’s molecular components lead to deep functional, molecular, and causal relationships among apparently distinct phenotypes."
+  
+  - **Reference**: Barabasi, A. et al. (2011), Network Medicine: A Network-based Approach to Human Disease, Nature Reviews Genetics. 
 
 ### Metabolites as networks 
 Metabolites are naturally represented as networks:
 
  - **Nodes**: represent individual metabolites.
+ 
  - **Edges (undirected)**: denote pairwise metabolite relationships.
 
 \newpage
@@ -59,7 +60,7 @@ Metabolites are naturally represented as networks:
 ### Correlation networks 
 \begin{itemize} 
 \item {\bf Drawback:} Correlations between metabolite pairs can be driven by direct and indirect relationships. 
-\item Drivers of high correlation include shared or common enzymatic activities. \footnote{Su and Clish, Metabolomics and Network Medicine, 2017}. 
+\item Drivers of high correlation include shared or common enzymatic activities. \footnote{Su and Clish, Metabolomics and Network Medicine, 2017}
 
 \item Large number of non-zero pairwise correlations are usually observed. 
 \item Absence of an edge results from satisfying a {\bf strong} criterion of marginal independence between metabolite pairs. \footnote{ Strimmer, K., Notes on Gaussian Graphical Models. http://www.strimmerlab.org/notes/ggm.html}
@@ -72,7 +73,7 @@ Metabolites are naturally represented as networks:
 \vspace{1ex}
 \item The precision (concentration) matrix $\boldmath{\Omega} = \boldmath{\Sigma}^{-1}$.  
 \vspace{1ex}
-\item If $\Omega_{jk}=0$, then the $i$th metabolite is independent of the $j$th metabolite, given all other variables. 
+\item If $\Omega_{jk}=0$, {\bf if and only} if the $i$th metabolite is independent of the $j$th metabolite, given all other variables. 
 \end{itemize} 
 
 
